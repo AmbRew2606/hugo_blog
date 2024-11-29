@@ -1,6 +1,6 @@
 # Игнорировать конфигурационный файл Hugo
 hugo.toml
-\themes\my-theme\hugo.toml
+/themes/my-theme/hugo.toml
 # Игнорировать директорию с логами
 logs/
 
