@@ -20,6 +20,10 @@ body, html {
   padding: 0;
 }
 
+.footer-text {
+  color: #C2C2C2;
+}
+
 /* Обёртка для всей страницы */
 .wrapper {
   display: flex;
@@ -99,7 +103,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Полная высота экрана */
+  height: 84vh; /* Полная высота экрана */
 }
 
 .blinking-cursor {
