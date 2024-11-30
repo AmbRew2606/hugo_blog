@@ -1,19 +1,19 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1>Категории</h1>
   <blockquote class="posts-blockquote">
   {{ .Content }}
 </blockquote>
   {{ range .Pages }}
-    <article class="test">
+    <article class="test"> 
+        <div class="category-block">
       <h2 class="posts-h2">
         <a class="posts-title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
       </h2>
-        {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     {{/*  {{ .Summary }}  */}}
-    <p class="posts-description">{{ .Params.description }}</p>
     <div class="Block-test">
-      <a class="read-more fs-14" href="{{ .RelPermalink }}">Читать далее</a>
+      <a class="category-more fs-14" href="{{ .RelPermalink }}">> Посмотреть все</a>
     </div>
+</div>
     </article>
   {{ end }}
 {{ end }}

@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+
+    <p>Статьи в этой категории:</p>
+
+        {{ range .Pages }}
+        <article class="test">
+          <h2 class="posts-h2">
+            <a class="posts-title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </h2>
+            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        {{/*  {{ .Summary }}  */}}
+        <p class="posts-description">{{ .Params.description }}</p>
+        <div class="Block-test">
+          <a class="read-more fs-14" href="{{ .RelPermalink }}">Читать далее</a>
+        </div>
+        </article>
+        {{ end }}
+
+{{ end }}

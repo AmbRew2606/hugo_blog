@@ -1,0 +1,25 @@
+ 
+{{ define "main" }}
+ 
+  <h1>Теги</h1>
+
+  {{ .Content }}
+  <div class="container-TagsAll">
+  {{ range .Pages }}
+
+        <div class="test">
+        <h2 class="tags-h2">
+            <a class="posts-title tags-title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </h2>
+        {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        {{ .Summary }}
+        <div class="tags-block">
+        <a class="tags-LookAll fs-12" href="{{ .RelPermalink }}">> Посмотреть все</a>
+        </div>
+        </div>
+
+  {{ end }}
+  </div>
+{{ end }}
+
+

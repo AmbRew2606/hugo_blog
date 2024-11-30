@@ -1,2 +1,25 @@
-<a href="{{ "/" | relURL }}">{{ site.Title }}</a>
+{{/*  
+    <div class="header-c">
+        <a href="{{ "/" | relURL }}">{{ site.Title }}</a>
+        <div class="header-test">
+            <div class="header-test-menu">
+                <span>Посты</span>
+                <span>Теги</span>
+                <span>Категории</span>
+            </div>
+        </div>
+    </div>  */}}
 
+
+
+    <header class="header-c">
+        <a href="{{ "/" | relURL }}" class="header-logo">{{ site.Title }}</a>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li><a href="{{ "/posts/" | relURL }}">Посты</a></li>
+            <li><a href="{{ "/tags/" | relURL }}">Теги</a></li>
+            <li><a href="{{ "/categories/" | relURL }}">Категории</a></li>
+          </ul>
+        </nav>
+      </header>
+      

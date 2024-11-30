@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1>#{{ .Title }}</h1>
+<p>Записи с этим тегом:</p>
+<div>
+  {{ range .Pages }}
+  <article>
+    <h2 class="posts-h2">
+      <a class="posts-title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </h2>
+    {{/*  <p>{{ .Summary }}</p>  */}}
+    <p>{{ .Params.description }}</p>
+    <div class="Block-test">
+      <a class="read-more fs-14" href="{{ .RelPermalink }}">Читать далее</a>
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

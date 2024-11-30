@@ -3,6 +3,8 @@ hugo.toml
 /themes/my-theme/hugo.toml
 # Игнорировать директорию с логами
 logs/
+/public
+
 
 # Игнорировать все файлы с расширением .log
 *.log
